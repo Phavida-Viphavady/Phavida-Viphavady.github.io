@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The Investigation | Isabella Stewart Gardner Museum Heist</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+      }
+
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+
+      $(document).ready(function(){
+
+        $('.image_box').click(function(){
+          $(this).next().stop().fadeIn(500)
+
+        $('.hidden_content_close').click(function() {
+          $('.hidden_content').fadeOut();
+        });
+
+      });
+    });
+
+    </script>
+
+  </head>
+
+  <body id="part3_content">
+
+    <nav>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="index.html" target="_blank">Home</a>
+                <a href="part-i-heist.html" target="_blank">Part I: The Heist</a>
+                <a href="part-ii-gallery.html" target="_blank">Part II: The Lost Garelly</a>
+                <a href="part-iii-investigation.html" target="_blank">Part III: The Investigation</a>
+            </div>
+        </div>
+
+        <span id="NavIcon" onclick="openNav()"><img src="images/nav_icon.png" alt="Navigation icon"></span>
+
+   </nav>
+
+   <header id="part3_header">
+     <figure id="part3_header_background" class="center">
+       <h1 id="part3_title"> Part 3: The Investigation:</h1>
+     </figure>
+   </header>
+
+   <div class="space"></div>
+
+   <main>
+      <section id="investigation">
+        <div class="part3_information hidden_left">
+          <p> The FBI has been investigating the Isabella Gardner Museum Heist for more than 30 years but the identity of the thieves and the location of the missing art remains a mystery.
+          The complexity of the investigation is largely due to the lack of evidence as most of the evidential records were destroyed by the thieves and the only main witnesses are the two security guards. The only personal evidence of the heist is <a href="https://commons.wikimedia.org/wiki/File:Sketches_of_Suspects_Isabella_Stewart_Gardner_Museum_Theft.jpg" target="_blank" class="image_appear">the sketches <img src="images/sketches.jpg" alt="sketches of the thieves" class="hidden_image1"></a> drawn from the description of the guards which provide litter to no help because of the vagueness of the description.</p>
+        </div>
+
+        <div class="part3_information hidden_right">
+          <p> The more helpful evidence is the data from <a href="https://www.gardnermuseum.org/about/theft-story" target="_blank" class="image_appear">the motion detectors <img src="images/motion-alarm-report1.jpg" alt="Motion alarm report during the heist" class="hidden_image2"></a> which record the activities of the thieves in the museum. The data shows that the thieves were in the museum for more than 80 minutes which is a bizarre case for art heists. </p>
+          <div id="quote_box">
+            <p> “ I've looked at well over 13, 1,400 art heists, and you never see them go past, say, 10 minutes. It just tells you that there was something about security here that they must have known to be that assured that they were safe and weren't going to be caught.”</p>
+            <p><a href="https://youtu.be/_YZZQlpA8HY?t=287" target="_blank">- Anthony Amore , DIR. of Security & Chief Investigating Officer</a></p>
+          </div>
+        </div>
+
+        <div class="space"></div>
+
+        <div class="part3_information hidden_left">
+            <p>Another peculiar thing about this heist is the choice of stolen works as the thieves ignored many valuable pieces such as <a href="https://www.gardnermuseum.org/experience/rooms/titian-room" target="_blank" class="image_appear">a painting by Titian <img src="images/titian-room.jpg" alt="Titian Room in the Isabella Gardner Museum" class="hidden_image3"></a> which is the most expensive piece in the museum. This might be because of the thieves' personal interest or maybe there was a specific request for the robbery.</p>
+            <div class="space_1"></div>
+        </div>
+
+      </section>
+
+      <section id="theories">
+        <hr>
+        <p>From the information gathered from the investigation, the FBI had come up with <a href="https://www.bostonglobe.com/metro/2017/03/18/six-theories-behind-stolen-gardner-museum-paintings/JmwHou86qo5MtBzX1fb9cI/story.html" target="_blank"> many theories and a long list of suspected </a> for the Isabella Gardner Museum Heist.</p>
+        <h2><u>The two most interesting theories are:</u></h2>
+
+        <div class="space"></div>
+
+        <div id="accordion_box">
+          <figure class="image_box">
+            <figcaption> A Work of a Local Mob: </figcaption>
+            <img src="images/mob-job.jpg" alt="Mobster carries gun">
+          </figure>
+
+          <div class="hidden_content" id="theory-1">
+            <span class="hidden_content_close">&times;</span>
+            <div class="theories_information">
+              <h3>A Work of a Local Mob:</h3>
+              <p class="hidden_text"> Two criminals, George Reissfelder and Leonard DiMuzio, as well as other crew members, were believed to be stealing the artworks from the Isabella Stewart Gardner Museum for Carmello Merlino, a local mob associate. After the deaths of Reissfelder and DiMuzio in 1991 and Merlino in 2005, it was believed that were passed to Bobby “Unc” Guarente and later to Robert Gentile, a Connecticut mobster.</p>
+              <p class="hidden_text">The FBI searched Gentile’s house in 2012 but there were not any of the art in the house. Instead, they found police badges and hats, weapons, $20,000 of cash and. Most importantly, a list of the stolen artworks and their potential prices in the black market. However, Gentile denied his participation in the heist and refused to provide any further information.</p>
+              <p class="hidden_text">On the 17th of September, 2021, <a href="https://allthatsinteresting.com/isabella-stewart-gardner-museum-heist" target="_blank"> <u>Robert Gentile was death</u> </a>. At the same time, the hope of the FBI to solve the case was also ruined.</p>
+              <div class="space_1"></div>
+              <p class="hidden_text"> Original Photo: <a href="https://www.nytimes.com/2015/03/01/arts/design/isabella-stewart-gardner-heist-25-years-of-theories.html" target="_blank">George Reissfelder</a> | <a href="https://news.artnet.com/art-world/isabella-stewart-gardner-heist-solved-283368" target="_blank"> Leonard DiMuzio</a>| <a href="https://www.wbur.org/lastseen/2018/09/30/carmello-merlino" target="_blank"> Carmello Merlino</a>| <a href="https://www.moviemaker.com/suspects-isabella-stewart-gardner-museum-heist-dead-this-is-a-robbery/" target="_blank">Bobby 'Unc' Guarente</a>| <a href="https://www.wcvb.com/amp/article/robert-gentile-breaks-his-silence-about-isabella-stewart-gardner-museum-heist/35474921" target="_blank">Robert Gentile</a> | <a href="https://www.pexels.com/photo/photo-of-cryptic-character-codes-and-magnifying-glass-on-table-top-7319068/" target="_blank">Background Image</a> </p>
+            </div>
+          </div>
+
+          <figure class="image_box">
+            <figcaption> An Inside Job:</figcaption>
+            <img src="images/inside-job.jpg" alt="Security guard">
+          </figure>
+
+          <div class="hidden_content" id="theory-2">
+            <span class="hidden_content_close">&times;</span>
+            <div class="theories_information">
+              <h3> An Inside Job:</h3>
+              <p class="hidden_text"> Rick or Richard E. Abath was the security guard who suspiciously broke the protocol and let the two thieves in the museum. More sceptically, <a href="https://www.washingtonpost.com/news/morning-mix/wp/2015/08/07/surveillance-video-raises-questions-and-possible-clues-in-25-year-old-museum-mystery/" target="_blank"> <u>a security footage retrieved in 2015</u></a> shows that Abath also let in and talked to another unauthorised visitor a day before the robbery. When Abath saw the video, he said he could not recognise that person and did not remember what happened that day.</p>
+              <iframe src='https://www.washingtonpost.com/video/c/embed/31754112-3ce2-11e5-a312-1a6452ac77d2' scrolling='no' allowfullscreen></iframe>
+              <p class="hidden_text">The amount of time that the thieves spent in the museum is also longer than other art heists. Hence, it is possible that the thieves were guaranteed their safety from people within the museum.</p>
+              <p class="hidden_text">Moreover, the data from motion detectors also shows that the two thieves never went into the room where "Chez Tortoni" by Manet was taken. The only person it detected to enter the room was Abath when he was doing his round. </p>
+              <p class="hidden_text">Because of these reasons, there is a possibility that Rick Abath was a part of the heist. However, he has never been arrested for this reason.</p>
+              <div class="space_1"></div>
+              <p class="hidden_text"> Original Photo: <a href="https://www.gardnermuseum.org/about/theft-story" target="_blank">Rick Abath</a> | <a href="https://matthewcavanaugh.photoshelter.com/image/I0000gGx9D1cvr3Y" target="_blank">Rick Abath</a> | <a href="https://www.pexels.com/photo/photo-of-cryptic-character-codes-and-magnifying-glass-on-table-top-7319068/" target="_blank">Background Image</a> </p>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+    </main>
+    <footer class="footer_absolute">
+      <div id="footer_inner_left">
+        <a href="part-ii-gallery.html" class="previous_page">&Larr; Part II: The Lost Garelly</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1142 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=IM+Fell+DW+Pica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Monsieur+La+Doulaise&family=Mrs+Saint+Delafield&family=Ms+Madi&family=Zeyada&display=swap');
+/* --- */
+
+*{
+  margin:0;
+  padding:0;
+}
+
+a{
+  text-decoration: none;
+}
+/* ---- NavBar ---- */
+/* Code adapted from w3schools*/
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 7;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.97);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  font-family: 'Cinzel Decorative', cursive;
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+#NavIcon img{
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  z-index:3;
+  display: block;
+  padding: 20px;
+  left:0px;
+  cursor: pointer;
+}
+
+
+/* ---- Home ---- */
+
+@keyframes ColorReveal {
+from{filter: grayscale(100%);}
+to{filter: grayscale(0%);}
+}
+
+@keyframes ZoomOut {
+  from{transform: scale(1.05)}
+  to{transform: scale(1)}
+
+}
+
+#showcase{
+  background-image: url("images/museumgarden.jpg");
+  background-size:cover;
+  background-position:center;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:0 20px;
+  animation: ColorReveal 5s linear, ZoomOut 5s ease-in;
+
+}
+
+#showcase h1{
+font-family: 'Cinzel Decorative', cursive;
+font-size: 70px;
+color: #FFFFFF;
+}
+
+#showcase p{
+  font-family: 'IM Fell DW Pica', serif;
+  font-size:30px;
+  color: #B2B2B2;
+}
+
+/* ---- Mouse scroll animation */
+/* Code adapted from Yurji Rightblog.ru (https://codepen.io/rightblog/pen/EagNMN/) */
+
+.mouse_scroll {
+  position: absolute;
+	display: block;
+	margin: auto;
+	width: 24px;
+	height: 100px;
+	margin-top: 125px;
+  bottom: 30px;
+}
+
+
+.m_scroll_arrows
+{
+  display: block;
+  width: 5px;
+  height: 5px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  margin: 0 0 3px 4px;
+
+  width: 16px;
+  height: 16px;
+}
+
+
+.unu
+{
+  margin-top: 1px;
+}
+
+.unu, .doi, .trei
+{
+    -webkit-animation: mouse-scroll 1s infinite;
+    -moz-animation: mouse-scroll 1s infinite;
+    animation: mouse-scroll 1s infinite;
+
+}
+
+.unu
+{
+  -webkit-animation-delay: .1s;
+  -moz-animation-delay: .1s;
+  -webkit-animation-direction: alternate;
+
+  animation-direction: alternate;
+  animation-delay: .3s;
+}
+
+.doi
+{
+  -webkit-animation-delay: .2s;
+  -moz-animation-delay: .2s;
+  -webkit-animation-direction: alternate;
+
+  animation-delay: .2s;
+  animation-direction: alternate;
+
+  margin-top: -6px;
+}
+
+.trei
+{
+  -webkit-animation-delay: .3s;
+  -moz-animation-delay: .3s;
+  -webkit-animation-direction: alternate;
+
+  animation-delay: .3s;
+  animation-direction: alternate;
+
+
+  margin-top: -6px;
+}
+
+.mouse {
+  height: 42px;
+  width: 24px;
+  border-radius: 14px;
+  transform: none;
+  border: 2px solid white;
+  top: 170px;
+}
+
+.wheel {
+  height: 5px;
+  width: 2px;
+  display: block;
+  margin: 5px auto;
+  background: white;
+  position: relative;
+
+  height: 4px;
+  width: 4px;
+  border: 2px solid #fff;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+}
+
+.wheel {
+  -webkit-animation: mouse-wheel 0.6s linear infinite;
+  -moz-animation: mouse-wheel 0.6s linear infinite;
+  animation: mouse-wheel 0.6s linear infinite;
+}
+
+@-webkit-keyframes mouse-wheel{
+   0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+@-moz-keyframes mouse-wheel {
+  0% { top: 1px; }
+  25% { top: 2px; }
+  50% { top: 3px;}
+  75% { top: 2px;}
+  100% { top: 1px;}
+}
+@-o-keyframes mouse-wheel {
+
+   0% { top: 1px; }
+  25% { top: 2px; }
+  50% { top: 3px;}
+  75% { top: 2px;}
+  100% { top: 1px;}
+}
+@keyframes mouse-wheel {
+
+   0% { top: 1px; }
+  25% { top: 2px; }
+  50% { top: 3px;}
+  75% { top: 2px;}
+  100% { top: 1px;}
+}
+
+@-webkit-keyframes mouse-scroll {
+
+  0%   { opacity: 0;}
+  50%  { opacity: .5;}
+  100% { opacity: 1;}
+}
+@-moz-keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+@-o-keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+@keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+
+#background1{
+  background-color: #0D0909;
+  height: 220vh;
+}
+
+#background1 p{
+  color: #D8D9BF;
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 20px;
+  text-align:justify;
+  /* padding: 5px 200px 5px 200px; */
+  width: 500px;
+  margin: auto;
+}
+
+#background1 p a{
+  color: #968453;
+}
+
+#background1 p a:hover {
+  font-style:italic;
+  background-color: rgba(84, 17, 4, 0.5);
+}
+
+.info-h2 {
+  color: white;
+  font-size: 80px;
+  font-family: 'Monsieur La Doulaise', cursive;
+  width: 700px;
+  left: 30%;
+  top: 122%;
+  position: absolute;
+  z-index: 50;
+  line-height: 80px;
+  text-align: right;
+}
+
+.space {
+  height: 70px;
+  display: block;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+#Museum_Map {
+	width: 500px;
+	height: 625px;
+  margin: auto;
+}
+
+p#map_text{
+  color: #000000;
+  font-size: 15px;
+  padding: 0;
+}
+
+p#source1{
+  color: #838A87;
+  font-size: 10px;
+  width: 45ch;
+}
+#source1 a{
+  color: #968453;
+  text-decoration: none;
+}
+
+#source1 a:hover{
+  font-style: italic;
+}
+
+p#source2{
+  color: #838A87;
+  font-size: 10px;
+  width: 55ch;
+  padding: 0;
+}
+#source2 a{
+  color: #968453;
+  text-decoration: none;
+}
+
+#source2 a:hover{
+  font-style: italic;
+}
+#source1{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.img-gardner{
+  margin: auto;
+}
+
+#source2{
+  float: right;
+  position: absolute;
+  padding: 0;
+  right: 0;
+}
+#background2 {
+  background-image: url("images/info3-bg.jpg");
+  background-size:cover;
+  background-position:center;
+  height:100vh;
+  padding:0 20px;
+  background-color: #0D0909;
+}
+
+#text_background2 p{
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 25px;
+  text-align: left;
+  color: #D8D9BF;
+  position: relative;
+  width: 450px;
+  padding: 30px 0px 0px 10px;
+
+}
+
+.center_object {
+  display: block;
+  text-align: center;
+  padding-top: 80px;
+}
+
+#NextPage1 {
+  font-family: 'Cinzel Decorative', serif;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 70px;
+  color: #403014;
+  /* background-color: #6F7370;
+  border: 1px solid #0D0D0D; */
+  display: inline-block;
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+  padding-top: 500px;
+}
+
+#NextPage1:hover {
+  color: #403014;
+  /* background-color: rgba(111,115,112,0.8); */
+  letter-spacing: 4px;
+  transition: all 0.5s ease 0s;
+  text-shadow: 2px 2px 8px #333;
+}
+
+/* ---- Part I: The Heist */
+/* Code adapted from Mert Nerukuc (http://codepen.io/knyttneve/pen/bgvmma) */
+
+@import url("https://fonts.googleapis.com/css?family=Cardo|Pathway+Gothic+One");
+.timeline {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 700px;
+  position: relative;
+}
+.timeline__content-title {
+  font-weight: normal;
+  font-size: 66px;
+  margin: -10px 0 0 0;
+  transition: .4s;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-family: 'IM Fell DW Pica', serif;
+  color: #fff;
+}
+.timeline__content-desc {
+  margin: 0;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'IM Fell DW Pica', serif;
+  font-weight: normal;
+  line-height: 25px;
+}
+
+.timeline__content-desc a{
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.timeline__content-desc a:hover{
+  color: #FFFFFF;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.space_1{
+  height: 30px;
+}
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  margin-left: -1px;
+  content: "";
+  background: rgba(255, 255, 255, 0.07);
+}
+@media only screen and (max-width: 767px) {
+  .timeline:before {
+    left: 40px;
+  }
+}
+.timeline-item {
+  padding: 40px 0;
+  opacity: .3;
+  filter: blur(2px);
+  transition: .5s;
+  box-sizing: border-box;
+  width: calc(50% - 40px);
+  display: flex;
+  position: relative;
+  transform: translateY(-80px);
+}
+.timeline-item:before {
+  content: attr(data-text);
+  letter-spacing: 3px;
+  width: 100%;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  font-family: 'IM Fell DW Pica', serif;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  top: 70%;
+  margin-top: -5px;
+  padding-left: 15px;
+  opacity: 0;
+  right: calc(-100% - 56px );
+}
+.timeline-item:nth-child(even) {
+  align-self: flex-end;
+}
+.timeline-item:nth-child(even):before {
+  right: auto;
+  text-align: right;
+  left: calc(-100% - 56px );
+  padding-left: 0;
+  border-left: none;
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+  padding-right: 15px;
+}
+.timeline-item--active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+.timeline-item--active:before {
+  top: 50%;
+  transition: .3s all .2s;
+  opacity: 1;
+}
+.timeline-item--active .timeline__content-title {
+  margin: -50px 0 20px 0;
+}
+@media only screen and (max-width: 767px) {
+  .timeline-item {
+    align-self: baseline !important;
+    width: 100%;
+    padding: 0 30px 150px 80px;
+  }
+  .timeline-item:before {
+    left: 10px !important;
+    padding: 0 !important;
+    top: 50px;
+    text-align: center !important;
+    width: 60px;
+    border: none !important;
+  }
+  .timeline-item:last-child {
+    padding-bottom: 40px;
+  }
+}
+.timeline__img {
+  max-width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+.timeline-container {
+  width: 100%;
+  position: relative;
+  padding: 80px 0;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.timeline-container:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(99, 99, 99, 0.8);
+  content: "";
+}
+.timeline-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+.timeline-header__title {
+  color: #fff;
+  font-size: 46px;
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: normal;
+  margin: 0;
+  padding-top: 40px;
+}
+.timeline-header__subtitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 16px;
+  letter-spacing: 5px;
+  margin: 10px 0 0 0;
+  font-weight: normal;
+  padding: 50px 100px;
+}
+
+.timeline-header__subtitle a{
+  font-style: italic;
+  font-weight: bold;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+.timeline-header__subtitle a:hover{
+  background-color: rgba(84, 17, 4, 0.5);
+}
+
+/* ---- Part II: The Lost Garelly ---- */
+
+
+#part2_content{
+  background-color: #0D0909;
+}
+
+#part2_header{
+  height: 200px;
+  text-align: center;
+  padding-top: 70px;
+}
+
+
+#part2_header h1{
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 46px;
+  color: #FFFFFF;
+}
+
+#part2_header p{
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 20px;
+  padding: 0 150px 0 150px;
+  color: #B2B2B2;
+}
+
+#garelly{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding-top: 100px;
+}
+.column {
+  float: left;
+  width: 300px;
+  padding: 10px;
+}
+
+.column img {
+  width: 300px;
+  height: 300px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.center{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.information{
+  background-color: #D8D9BF;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  display: none;
+  position: fixed;
+  z-index: 8;
+  overflow: auto;
+}
+
+.information_close {
+	position: fixed;
+  z-index: 9;
+  display: block;
+	top: 15px;
+	right: 30px;
+	color: black;
+	background: none;
+	font-size: 50px;
+  cursor: pointer;
+}
+
+.information_img{
+  left: 0;
+  padding: 0;
+  height: 795px;
+}
+
+.information_img_landscape{
+  padding: 150px 0px 150px 0px;
+  height: 500px;
+}
+
+.information_text{
+  float: right;
+  padding: 200px 80px 70px 70px;
+  width: 500px;
+}
+
+.information_text a{
+font-family: 'Cinzel Decorative', cursive;
+color: #0D0909;
+font-size: 60px;
+padding: 5px;
+cursor: pointer;
+}
+
+.information_text a:hover {
+  font-style: italic;
+  color: #A38A00;
+  height: 60px;
+}
+
+.information_text p{
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 30px;
+  color: #0D0909;
+}
+
+/* ---- Part III: The investigation ---- */
+#part3_content{
+  background: #0D0909;
+}
+
+
+
+#part3_header{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+#part3_header_background{
+background-image: url(images/part2-header.jpg);
+width: 1400px;
+height: 410px;
+}
+
+#part3_title{
+  font-family: 'Cinzel Decorative', cursive;
+  color: #FFFFFF;
+  font-size: 46px;
+  position: absolute;
+  z-index: 2;
+}
+
+#investigation p{
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 20px;
+  padding: 10px 150px 10px 150px;
+  color: #B2B2B2;
+}
+
+.part3_information{
+  height: 35vh;
+}
+
+.part3_information p{
+  float: left;
+  width: 700px;
+}
+
+#quote_box{
+  text-align: center;
+}
+
+#quote_box p{
+  background-color: #191111;
+  padding: 18px 150px 18px 150px;
+}
+
+#quote_box a{
+  color: #B2B2B2;
+  font-style: italic;
+}
+
+#quote_box p a:hover{
+  color: #B2B2B2;
+  cursor: pointer;
+  background-color: rgba(84, 17, 4, 0.5);
+}
+
+.image_appear{
+  color: #968453;
+  cursor: pointer;
+}
+.image_appear img{
+  display: none;
+}
+
+.image_appear:hover{
+  font-style:italic;
+  background-color: rgba(84, 17, 4, 0.5);
+}
+.image_appear:hover .hidden_image1{
+  display: flex;
+  position: absolute;
+  right: 250px;
+  top: 500px;
+}
+
+.image_appear:hover .hidden_image2{
+  display: flex;
+  position: absolute;
+  right: 50px;
+  top: 620px;
+}
+
+.image_appear:hover .hidden_image3{
+  display: flex;
+  position: absolute;
+  right: 50px;
+  top: 800px;
+}
+
+#theories{
+  height: 80vh;
+  color: white;
+
+}
+
+
+#theories hr{
+  width: 50%;
+  display: block;
+  margin-top:0.5em;
+  margin-bottom:0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style:inset;
+  border-width:1px;
+}
+
+#theories p{
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 23px;
+  text-align: center;
+  padding: 30px 150px 30px 150px;
+
+}
+
+#theories h2{
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 40px;
+  text-align: center;
+  padding:10px;
+
+}
+
+#theories a{
+color: #968453;
+}
+
+#theories a:hover {
+  font-style:italic;
+  background-color: rgba(84, 17, 4, 0.5);
+}
+
+#accordion_box{
+text-align:center;
+}
+
+figure.image_box {
+  color: #A38A00;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 325px;
+  padding: 0px 20px 20px 20px;
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+
+figure.image_box:hover{
+filter: grayscale(0);
+letter-spacing: 2px;
+transition: 0.5s;
+
+}
+
+figure.image_box img{
+  width: 260px;
+  height: 325px;
+  border: 3px solid #FFFFFF;
+}
+
+figure.image_box figcaption{
+font-family: 'Cinzel Decorative', cursive;
+font-size: 16px;
+}
+
+.hidden_content{
+  background-color: #D8D9BF;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  display: none;
+  position: fixed;
+  z-index: 4;
+  overflow: auto;
+}
+
+.hidden_content_close {
+position: fixed;
+z-index: 5;
+display: block;
+top: 15px;
+right: 30px;
+color: black;
+background: none;
+font-size: 50px;
+cursor: pointer;
+}
+
+.hidden_text{
+  padding: 50px;
+}
+
+#theory-1{
+  background-image: url(images/theories-background1.jpg);
+}
+
+#theory-2{
+background-image: url(images/theories-background2.jpg);
+}
+
+.theories_information{
+  width: 900px;
+  float: right;
+  padding: 80px 100px 50px 20px;
+  color: #000000;
+}
+
+.theories_information p{
+  background: #FFFFFF;
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 20px;
+  padding: 15px 100px 15px 100px;
+}
+
+.theories_information h3{
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 40px;
+  color: #4D0013;
+  padding: 50px;
+}
+
+.theories_information a{
+  color: #312113;
+}
+
+.theories_information p a:hover{
+  font-style: italic;
+  cursor: pointer;
+  background-color: rgba(84, 17, 4, 0.5);
+}
+
+.theories_information iframe{
+  width: 480px;
+  height: 290px;
+  border: 0;
+  padding: 50px;
+  overflow: hidden;
+}
+
+footer{
+  background-image: url(images/footer.png);
+  width: 100%;
+}
+
+footer.footer_absolute{
+  position: absolute;
+  /* left: 0px;
+  bottom: 0px; */
+  z-index: 5;
+}
+
+footer div#footer_inner_left {
+  width: 50%;
+  float: left;
+  text-align: left;
+  height: 150px;
+}
+footer div#footer_inner_right {
+  width: 50%;
+  float: right;
+  text-align: right;
+  height: 150px;
+}
+
+footer a:hover{
+  letter-spacing: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.previous_page{
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 25px;
+  color:#580818;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  top: 75%;
+  transform: translateY(-65%);
+}
+
+.next_page{
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 25px;
+  text-decoration: none;
+  color:#580818;
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  top: 75%;
+  transform: translateY(-65%);
+}
